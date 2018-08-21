@@ -11,8 +11,8 @@ install:
 
 script:
   - >
-    yangcli_version_output=$(
-      docker run --tty yuma123/yangcli:2.11
-        yangcli --version)
+    yangcli_version_output="$( \
+      docker run --tty yuma123/yangcli:2.11 \
+        yangcli --version)"
 
   - test "$yangcli_version_output" == "yangcli version 2.11-0"

@@ -1,0 +1,18 @@
+language: bash
+services:
+  - docker
+
+install:
+  - >
+    docker build \
+      --tag yuma123/yangcli:2.11 \
+      --tag yuma123/yangcli:latest \
+      ./yangcli/
+
+script:
+  - >
+    yangcli_version_output=$(
+      docker run --tty yuma123/yangcli:2.11
+        yangcli --version)
+
+  - test "$yangcli_version_output" == "yangcli version 2.11-0"

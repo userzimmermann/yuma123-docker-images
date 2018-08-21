@@ -15,5 +15,5 @@ script:
       docker run --tty yuma123/yangcli:2.11 \
         yangcli --version | xargs)"
 
-  - echo "$yangcli_version_output"
+  - echo "\"$yangcli_version_output\""
   - test "$yangcli_version_output" == "yangcli version 2.11-0"

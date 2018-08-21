@@ -1,4 +1,5 @@
-language: bash
+language: python
+python: '3.6'
 services:
   - docker
 
@@ -9,11 +10,8 @@ install:
       --tag yuma123/yangcli:latest \
       ./yangcli/
 
-script:
-  - >
-    yangcli_version_output="$( \
-      docker run --tty yuma123/yangcli:2.11 \
-        yangcli --version | xargs)"
+  - pip install --upgrade pip setuptools
+  - pip install robotframework
 
-  - echo "'$yangcli_version_output'"
-  - test "$yangcli_version_output" == "yangcli version 2.11-0"
+script:
+  - robot ./yangcli/test/

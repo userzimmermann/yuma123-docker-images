@@ -17,4 +17,6 @@ RUN apt-get update
 RUN apt-get install --yes \
             yangcli=2.11-0
 
-CMD yangcli
+CMD if [ -n "$READLINE_INIT" ] ; then \
+        echo "$READLINE_INIT" > ~/.inputrc \
+    ; fi && yangcli

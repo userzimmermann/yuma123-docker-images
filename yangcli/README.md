@@ -1,6 +1,10 @@
 # The yuma123/yangcli docker image
 
-**Image source:** https://github.com/userzimmermann/yuma123-docker-images/blob/master/yangcli/Dockerfile
+**Docker image source:** https://github.com/userzimmermann/yuma123-docker-images/blob/master/yangcli/Dockerfile
+
+**Base image:** [`debian:stretch`][base]
+
+[base]: https://hub.docker.com/r/library/debian
 
 ## About yangcli
 

@@ -12,7 +12,7 @@ Version
 
    Log To Console   \n${result.stderr}\n
 
-   Should Be Equal As Integers   ${result.rc}   0
+   Should Be Equal As Integers   ${result.rc}   0   non-zero return code
    Should Be Equal As Strings
    ...   ${result.stdout.strip()}
    ...   yangcli version 2.11-0

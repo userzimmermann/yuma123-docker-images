@@ -10,6 +10,8 @@ Version
    ...   yuma123/yangcli:2.11
    ...   yangcli   --version
 
+   Log To Console   \n${result.stderr}\n
+
    Should Be Equal As Integers   ${result.rc}   0
    Should Be Equal As Strings
    ...   ${result.stdout.strip()}

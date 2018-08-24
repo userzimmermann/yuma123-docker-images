@@ -1,6 +1,6 @@
 # The yuma123/yangcli docker image
 
-**Image source**: https://github.com/userzimmermann/yuma123-docker-images/blob/master/yangcli/Dockerfile
+**Image source:** https://github.com/userzimmermann/yuma123-docker-images/blob/master/yangcli/Dockerfile
 
 ## Running
 
@@ -14,11 +14,13 @@ Further usage instructions for `yangcli` itself will be printed before the first
 
 ## Configuration
 
-The `yangcli>` prompt is based on [GNU Readline][readline]. You can easily add your custom [readline init] configuration to the container by putting it into a `READLINE_INIT` environment variable. The content of that variable will be written to `~/.inputrc` before starting `yangcli`. E.g. for enabling `vi` mode:
+The `yangcli>` prompt is based on [GNU Readline][readline]. You can easily add your custom [readline init] configuration to the container by putting it into a `READLINE_INIT` environment variable. The content of that variable will be written to `~/.inputrc` before starting `yangcli`. E.g. for enabling [vi mode]:
 
 [readline]: https://tiswww.case.edu/php/chet/readline/rltop.html
 
 [readline init]: https://tiswww.case.edu/php/chet/readline/readline.html#SEC10
+
+[vi mode]: https://tiswww.case.edu/php/chet/readline/readline.html#SEC22
 
 ```console
 docker run -ti -e READLINE_INIT="set editing-mode vi" yuma123/yangcli

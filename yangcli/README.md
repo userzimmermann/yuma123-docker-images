@@ -2,7 +2,7 @@
 
 **Docker image source:** https://github.com/userzimmermann/yuma123-docker-images/blob/master/yangcli/Dockerfile
 
-**Base image:** [`debian:stretch`][base]
+**Base image:** [`debian:stretch-slim`][base]
 
 [base]: https://hub.docker.com/r/library/debian
 

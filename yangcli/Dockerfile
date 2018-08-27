@@ -1,7 +1,6 @@
 FROM debian:stretch-slim
 
 RUN apt-get update
-RUN apt-get dist-upgrade --yes
 RUN apt-get install --yes --no-install-recommends \
             gnupg \
             software-properties-common \

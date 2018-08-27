@@ -13,8 +13,11 @@ RUN add-apt-repository --enable-source \
 RUN wget -O - http://yuma123.org/repos/yuma123.gpg.key \
     | apt-key add
 
-RUN apt-get update
-RUN apt-get install --yes \
+# combine update and install into one command line to also get an updated
+# package list for installing new yangcli versions in docker builds with
+# enabled cache
+RUN apt-get update && \
+    apt-get install --yes \
             yangcli=2.11-0
 
 CMD if [ -n "$READLINE_INIT" ] ; then \

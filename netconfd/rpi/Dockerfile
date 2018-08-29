@@ -7,7 +7,7 @@ RUN apt-get update                                                          \
         wget                                                                \
                                                                             \
  && add-apt-repository --enable-source                                      \
-        "deb http://yuma123.org/repos/apt/debian stretch main"              \
+        "deb [arch=armhf] http://yuma123.org/repos/apt/debian stretch main" \
                                                                             \
  && wget -O - http://yuma123.org/repos/yuma123.gpg.key                      \
   | apt-key add                                                             \

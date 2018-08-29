@@ -5,10 +5,18 @@ services:
 
 install:
   - >
+    docker run --rm --privileged \
+      multiarch/qemu-user-static:register --reset
+  - >
     docker build \
       --tag yuma123/yangcli:2.11 \
       --tag yuma123/yangcli:latest \
       ./yangcli/
+  - >
+    docker build \
+      --tag yuma123/rpi-netconfd:2.11 \
+      --tag yuma123/rpi-netconfd:latest \
+      ./netconfd/rpi/
 
   - pip install --upgrade pip setuptools
   - pip install robotframework

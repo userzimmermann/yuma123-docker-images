@@ -14,9 +14,9 @@ install:
       ./yangcli/
   - >
     docker build \
-      --tag yuma123/rpi-netconfd:2.11 \
-      --tag yuma123/rpi-netconfd:latest \
-      ./netconfd/rpi/
+      --tag yuma123/armhf-netconfd:2.11 \
+      --tag yuma123/armhf-netconfd:latest \
+      ./netconfd/armhf/
 
   - pip install --upgrade pip setuptools
   - pip install robotframework

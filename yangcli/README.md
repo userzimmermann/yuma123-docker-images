@@ -2,6 +2,8 @@
 
 **Docker image source:** https://github.com/userzimmermann/yuma123-docker-images/blob/master/yangcli/Dockerfile
 
+**Entrypoint script:** https://github.com/userzimmermann/yuma123-docker-images/blob/master/yangcli/yangcli-entrypoint.bash
+
 **Base image:** [`debian:stretch-slim`][base]
 
 [base]: https://hub.docker.com/r/library/debian
@@ -16,13 +18,19 @@
 
 ## Running
 
-This docker image defines `yangcli` as default command. So all you need to do for pulling the image, creating a container, and starting an interactive `yangcli` session is:
+All you need to do for pulling the image, creating a container, and starting an interactive `yangcli` session is:
 
 ```console
 docker run -ti yuma123/yangcli
 ```
 
 Further usage instructions for `yangcli` itself will be printed before the first `yangcli>` prompt
+
+The `yangcli-entrypoint.bash` of this docker image passes all further arguments directly to `yangcli`, like:
+
+```console
+docker run -ti yuma123/yangcli --help
+```
 
 ## Configuration
 

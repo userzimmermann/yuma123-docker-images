@@ -7,8 +7,7 @@ Library   Process
 
 Version
    ${result} =   Run Process   docker   run   --tty
-   ...   yuma123/yangcli:2.11
-   ...   yangcli   --version
+   ...   yuma123/yangcli:2.11   --version
 
    Log To Console   \n${result.stderr}\n
 

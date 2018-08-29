@@ -3,19 +3,13 @@ FROM resin/rpi-raspbian:stretch
 RUN apt-get update                                                          \
  && apt-get install --yes --no-install-recommends                           \
         gnupg                                                               \
-        software-properties-common                                          \
         wget                                                                \
                                                                             \
- && add-apt-repository --enable-source                                      \
-        "deb [arch=armhf] http://yuma123.org/repos/apt/debian stretch main" \
+ && echo "deb http://yuma123.org/repos/apt/debian stretch main"             \
+ >> /etc/apt/sources.list                                                   \
                                                                             \
  && wget -O - http://yuma123.org/repos/yuma123.gpg.key                      \
   | apt-key add                                                             \
-                                                                            \
- && apt-get purge --yes --auto-remove                                       \
-        gnupg                                                               \
-        software-properties-common                                          \
-        wget                                                                \
                                                                             \
  && apt-get clean                                                           \
  && rm -rf /var/lib/apt/lists/*

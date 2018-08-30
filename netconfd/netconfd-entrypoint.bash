@@ -45,8 +45,10 @@ for module in ${NETCONF_MODULES} ; do
     netconfd_module_options="${netconfd_module_options} --module=${module}"
 done
 netconfd                                                                    \
+    --port="${NETCONF_PORT}"                                                \
     --superuser="${NETCONF_USER}"                                           \
     --startup="${NETCONF_STARTUP_CFG_FILE}"                                 \
     --log-level="${NETCONF_LOG_LEVEL}"                                      \
                                                                             \
-    ${netconfd_module_options}
+    ${netconfd_module_options}                                              \
+    "$@"

@@ -17,6 +17,16 @@ install:
       --tag yuma123/rpi-yangcli:2.12 \
       --tag yuma123/rpi-yangcli:latest \
       ./yangcli/rpi/
+  - >
+    docker build \
+      --tag yuma123/netconfd:2.12 \
+      --tag yuma123/netconfd:latest \
+      ./netconfd/
+  - >
+    docker build \
+      --tag yuma123/rpi-netconfd:2.12 \
+      --tag yuma123/rpi-netconfd:latest \
+      ./netconfd/rpi/
 
   - pip install --upgrade pip setuptools
   - pip install robotframework

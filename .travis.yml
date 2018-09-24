@@ -9,12 +9,12 @@ install:
       multiarch/qemu-user-static:register --reset
   - >
     docker build \
-      --tag yuma123/yangcli:2.11 \
+      --tag yuma123/yangcli:2.12 \
       --tag yuma123/yangcli:latest \
       ./yangcli/
   - >
     docker build \
-      --tag yuma123/rpi-yangcli:2.11 \
+      --tag yuma123/rpi-yangcli:2.12 \
       --tag yuma123/rpi-yangcli:latest \
       ./yangcli/rpi/
 

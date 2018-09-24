@@ -17,9 +17,9 @@ RUN apt-get update                                                          \
 RUN apt-get update                                                          \
  && apt-get install --yes --no-install-recommends                           \
         dos2unix                                                            \
-        netconfd=2.11-0                                                     \
-        netconfd-module-ietf-interfaces=2.11-0                              \
-        netconfd-module-ietf-system=2.11-0                                  \
+        netconfd=2.12-0                                                     \
+        netconfd-module-ietf-interfaces=2.12-0                              \
+        netconfd-module-ietf-system=2.12-0                                  \
         openssh-server                                                      \
         openssl                                                             \
                                                                             \

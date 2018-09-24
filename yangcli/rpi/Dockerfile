@@ -17,7 +17,7 @@ RUN apt-get update                                                          \
 RUN apt-get update                                                          \
  && apt-get install --yes --no-install-recommends                           \
         dos2unix                                                            \
-        yangcli=2.11-0                                                      \
+        yangcli=2.12-0                                                      \
                                                                             \
  && apt-get clean                                                           \
  && rm -rf /var/lib/apt/lists/*
